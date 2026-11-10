@@ -30,7 +30,7 @@ For privacy return: {"status":"decline","message":"We no fit use this one - e be
       method: 'POST',
       headers: { 'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'meta-llama/llama-4-maverick-17b-128e-instruct',
+        model: 'llama-3.2-11b-vision-preview',
         messages: [
           { role: 'system', content: SYSTEM },
           { role: 'user', content: [
