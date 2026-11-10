@@ -23,7 +23,7 @@ export default async function handler(req, res) {
           ] }
         ],
         temperature: 0.2,
-        max_tokens: 3000
+       max_tokens: 6000
       })
     });
     const data = await r.json();
