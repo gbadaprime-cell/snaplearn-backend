@@ -49,10 +49,7 @@ For privacy return: {"status":"decline","message":"We no fit use this one - e be
       return res.status(500).json({ status: 'error', message: 'Groq error: ' + (data?.error?.message || 'unknown'), code: data?.error?.code || '' });
     }
     const text = data.choices?.[0]?.message?.content || '';
-    if (!text) {
-      console.log('EMPTY GROQ:', JSON.stringify(data));
-      return res.status(500).json({ status: 'error', message: 'Groq return empty, try again' });
-    }
+    if (!text) return res.status(500).json({ status: 'error', message: 'Groq return empty, try again' });
     try {
       const parsed = JSON.parse(text);
       return res.status(200).json(parsed);
