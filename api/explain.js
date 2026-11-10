@@ -13,7 +13,7 @@ export default async function handler(req, res) {
       method: 'POST',
       headers: { 'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'meta-llama/llama-4-maverick-17b-128e-instruct',
+        model: 'qwen/qwen3.8-27b',
         messages: [
           { role: 'system', content: 'You are SnapLearn. Read ONLY what is in the note. No add topic. If Bible or privacy, say DECLINE. If blur, say RETRY. Return JSON only.' },
           { role: 'user', content: [
